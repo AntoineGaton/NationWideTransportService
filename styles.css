@@ -67,16 +67,15 @@ body {
   }
 
   .trailer-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet and up */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   .trailer-card {
-    height: 238px; /* Original height from Figma */
+    height: 238px;
   }
 }
 
-/* Adjust main title size for mobile */
 @media (max-width: 767px) {
   .main-title,
   .main-title .highlight {
@@ -84,7 +83,7 @@ body {
   }
 
   .trailer-card {
-    height: 200px; /* Slightly smaller height for mobile */
+    height: 200px;
   }
 }
 
@@ -102,12 +101,10 @@ body {
   overflow: hidden;
   height: 238px;
   width: 100%;
-  box-shadow: 10 10 10 1px white;
-}
-
-/* Remove the hover glow effect */
-.trailer-card:hover {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); /* Keep it consistent on hover */
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 5px 5px white;
+  -webkit-box-shadow: 5px 5px white;
+  box-shadow: -3px 3px white;
 }
 
 .card-content {
@@ -254,8 +251,8 @@ body {
 /* Update drawer styles */
 .drawer {
   position: absolute;
-  top: 60px;
-  right: 0; /* Change from -300px to 0 */
+  top: 62px;
+  right: -5px;
   width: 300px;
   background: rgba(36, 36, 36, 0.95);
   padding: 20px;
@@ -320,4 +317,13 @@ body {
 .social-link:hover {
   transform: translateY(-3px);
   color: #ffed4a;
+}
+
+/* Update positioning for nav */
+.nav-icon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 1000;
 }
